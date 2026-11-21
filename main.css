@@ -1,0 +1,375 @@
+/* Paleta de colores elegante */
+:root {
+  --color-pizarra: #2E3A44;     /* Header y Footer */
+  --color-arena: #EBE0D0;       /* Fondo Hero */
+  --color-crema-fondo: #F5F2ED; /* Fondo inferior */
+  --color-tarjeta: #FAF8F5;     /* Fondo tarjetas */
+  --color-terracota: #C46D4E;   /* Acento Fuego y botones */
+  --color-mar: #5B8C85;         /* Acento Mar */
+  --color-texto: #3A3532;       /* Texto oscuro suave */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 95px; /* Evita que la barra fija tape los títulos al navegar */
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-crema-fondo);
+  color: var(--color-texto);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  padding-top: 94px; /* Compensa la altura de la barra fija para que no tape Inicio */
+}
+
+
+/* --- HEADER (BARRA FIJA) --- */
+header {
+  width: 100%;
+  background-color: var(--color-pizarra);
+  color: #FFFFFF;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--color-terracota);
+  flex-wrap: wrap;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icono {
+  width: 85px;
+  height: 55px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.logo-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-texto h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.logo-texto span {
+  font-size: 0.85rem;
+  color: #D5CFC7;
+  font-family: Georgia, serif;
+  margin-top: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--color-terracota);
+}
+
+/* --- SECCIÓN INICIO (PORTADA COMPLETA) --- */
+.hero-dividido {
+  width: 100%;
+  min-height: calc(100vh - 94px); /* Cubre el 100% de la pantalla visible debajo del menú */
+  background-color: var(--color-arena);
+  padding: 50px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-texto {
+  flex: 1.2;
+  max-width: 580px;
+}
+
+.hero-texto h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.8rem;
+  line-height: 1.18;
+  color: var(--color-pizarra);
+  margin-bottom: 18px;
+}
+
+.hero-texto h2 span {
+  color: var(--color-terracota);
+  display: block;
+}
+
+.hero-texto p {
+  font-size: 1.05rem;
+  color: #544D48;
+  margin-bottom: 28px;
+}
+
+.btn-explorar {
+  background-color: var(--color-terracota);
+  color: #FFFFFF;
+  padding: 14px 34px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(196, 109, 78, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-explorar:hover {
+  background-color: #A8583C;
+  transform: translateY(-2px);
+}
+
+.hero-imagen {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-imagen img {
+  width: 400px;
+  height: 330px;
+  object-fit: cover;
+  object-position: center 65%;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(46, 58, 68, 0.16);
+}
+
+/* --- SECCIÓN NOSOTROS --- */
+.seccion-nosotros {
+  width: 100%;
+  padding: 70px 8%;
+  background-color: var(--color-crema-fondo);
+}
+
+.nosotros-cabecera {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 45px;
+}
+
+.subtitulo-seccion {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-terracota);
+  margin-bottom: 8px;
+}
+
+.nosotros-cabecera h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.3rem;
+  color: var(--color-pizarra);
+  margin-bottom: 15px;
+}
+
+.nosotros-cabecera p {
+  font-size: 1.05rem;
+  color: #544D48;
+}
+
+.tarjetas-grid.dos-columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.tarjeta {
+  background-color: var(--color-tarjeta);
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+}
+
+.tarjeta.mar {
+  border-top: 4px solid var(--color-mar);
+}
+
+.tarjeta.mar h3 {
+  color: var(--color-pizarra);
+}
+
+.tarjeta.fuego {
+  border-top: 4px solid var(--color-terracota);
+}
+
+.tarjeta.fuego h3 {
+  color: var(--color-terracota);
+}
+
+.tarjeta-identidad {
+  background-color: var(--color-tarjeta);
+  border-radius: 12px;
+  padding: 35px;
+  border-left: 4px solid var(--color-pizarra);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.tarjeta-identidad h4 {
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  color: var(--color-terracota);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.tarjeta-identidad p {
+  font-size: 0.98rem;
+  color: var(--color-texto);
+}
+
+/* Nuestros Pilares */
+.pilares-bloque {
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+.titulo-pilares {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
+  color: var(--color-pizarra);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.pilar-item {
+  background-color: var(--color-tarjeta);
+  padding: 22px 25px;
+  border-radius: 10px;
+  border: 1px solid #E5DDD0;
+}
+
+.pilar-item h5 {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: var(--color-pizarra);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.pilar-item p {
+  font-size: 0.92rem;
+  color: #5A534C;
+}
+
+/* Banner Nuestra Promesa */
+.promesa-banner {
+  max-width: 900px;
+  margin: 50px auto 0;
+  background-color: var(--color-arena);
+  border-radius: 14px;
+  padding: 40px 30px;
+  text-align: center;
+  border-top: 3px solid var(--color-terracota);
+}
+
+.promesa-banner span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-terracota);
+}
+
+.promesa-banner blockquote {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
+  color: var(--color-pizarra);
+  margin: 10px 0 8px;
+  font-weight: bold;
+}
+
+.promesa-banner p {
+  font-size: 1rem;
+  color: #544D48;
+  font-style: italic;
+}
+
+/* --- FOOTER --- */
+footer {
+  width: 100%;
+  background-color: var(--color-pizarra);
+  color: #D5CFC7;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+}
+
+/* --- ADAPTACIÓN PARA CELULARES --- */
+@media (max-width: 850px) {
+  .hero-dividido {
+    flex-direction: column;
+    text-align: center;
+    padding: 45px 6%;
+    min-height: auto;
+  }
+
+  .hero-texto h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-imagen {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-imagen img {
+    width: 100%;
+    max-width: 380px;
+    height: 280px;
+  }
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | De Mar & Fuego</title>
+  <style>
+    :root {
+      --azul-oscuro: #24303c;
+      --crema-fondo: #efe5d8;
+      --terracota: #c86d44;
+      --terracota-hover: #a85632;
+      --texto-oscuro: #2d2926;
+      --blanco: #ffffff;
+      --borde-suave: #dcd0c0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--crema-fondo);
+      color: var(--texto-oscuro);
+      line-height: 1.6;
+    }
+
+    /* ENCABEZADO */
+    header {
+      background-color: var(--azul-oscuro);
+      color: var(--blanco);
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 4px solid var(--terracota);
+    }
+
+    .marca h1 {
+      font-family: Georgia, serif;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+    }
+
+    .marca p {
+      font-size: 0.8rem;
+      color: #d1d5db;
+    }
+
+    .btn-volver {
+      color: var(--blanco);
+      text-decoration: none;
+      border: 1px solid var(--blanco);
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      transition: 0.3s;
+    }
+
+    .btn-volver:hover {
+      background-color: var(--terracota);
+      border-color: var(--terracota);
+    }
+
+    /* BANNER */
+    .banner-contacto {
+      background-color: var(--azul-oscuro);
+      color: var(--blanco);
+      padding: 35px 5%;
+      text-align: center;
+    }
+
+    .banner-contacto h2 {
+      font-family: Georgia, serif;
+      font-size: 2.1rem;
+      margin-bottom: 8px;
+    }
+
+    .banner-contacto p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #e2e8f0;
+      font-size: 0.95rem;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .contenedor {
+      max-width: 1100px;
+      margin: 45px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .tarjeta-info, .tarjeta-formulario {
+      background-color: var(--blanco);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      border-top: 5px solid var(--terracota);
+    }
+
+    h3 {
+      font-family: Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--azul-oscuro);
+      margin-bottom: 20px;
+    }
+
+    .dato-item {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--borde-suave);
+    }
+
+    .dato-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .dato-item strong {
+      display: block;
+      color: var(--terracota);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .dato-item p {
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    /* FORMULARIO */
+    .campo {
+      margin-bottom: 15px;
+    }
+
+    .campo label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: var(--azul-oscuro);
+    }
+
+    .campo input, .campo select, .campo textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--borde-suave);
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    .campo textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .btn-enviar {
+      width: 100%;
+      background-color: var(--terracota);
+      color: var(--blanco);
+      border: none;
+      padding: 13px;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-enviar:hover {
+      background-color: var(--terracota-hover);
+    }
+
+    /* MAPA */
+    .mapa-contenedor {
+      max-width: 1100px;
+      margin: 0 auto 50px auto;
+      padding: 0 20px;
+    }
+
+    .mapa-marco {
+      width: 100%;
+      height: 320px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    footer {
+      background-color: var(--azul-oscuro);
+      color: #d1d5db;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .contenedor {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="marca">
+      <h1>DE MAR & FUEGO</h1>
+      <p>Herencia Culinaria • Castilla, Piura</p>
+    </div>
+    <a href="index.html" class="btn-volver">← Volver al Inicio</a>
+  </header>
+
+  <section class="banner-contacto">
+    <h2>Contáctenos</h2>
+    <p>Estamos a su entera disposición para atender sus consultas, reservas corporativas, eventos especiales y pedidos.</p>
+  </section>
+
+  <main class="contenedor">
+    <!-- COLUMNA IZQUIERDA: INFORMACIÓN -->
+    <div class="tarjeta-info">
+      <h3>Información de Atención</h3>
+
+      <div class="dato-item">
+        <strong>📍 Ubicación</strong>
+        <p>Urb. El Bosque, Calle Las Jacarandas s/n<br>Distrito de Castilla, Piura - Perú</p>
+        
+      </div>
+
+      <div class="dato-item">
+        <strong>📞 Teléfono y WhatsApp Business</strong>
+        <p>+51 922 543 431</p>
+      </div>
+
+      <div class="dato-item">
+        <strong>🕒 Horario de Atención</strong>
+        <p>Lunes a Domingo: 12:00 m. – 11:00 p. m.</p>
+      </div>
+
+      <div class="dato-item">
+        <strong>🏢 Atención Corporativa y Eventos</strong>
+        <p>Almuerzos ejecutivos, cenas navideñas, convenios institucionales y celebraciones familiares.</p>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: FORMULARIO DIRECTO -->
+    <div class="tarjeta-formulario">
+      <h3>Envíenos un Mensaje</h3>
+
+      <div class="campo">
+        <label for="nombre">Nombre o Empresa</label>
+        <input type="text" id="nombre" placeholder="Ej. Juan Pérez / Empresa S.A.C.">
+      </div>
+
+      <div class="campo">
+        <label for="motivo">Motivo de Contacto</label>
+        <select id="motivo">
+          <option value="Consulta General">Consulta General</option>
+          <option value="Reserva de Mesa">Reserva de Mesa</option>
+          <option value="Evento Corporativo / Navidad">Evento Corporativo / Almuerzo o Cena Navideña</option>
+          <option value="Sugerencia o Felicitación">Sugerencia o Felicitación</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" placeholder="Escriba aquí los detalles de su consulta, fecha o cantidad de personas..."></textarea>
+      </div>
+
+<a id="btn-whatsapp" 
+   href="https://wa.me/51922543431"
+   target="_blank" 
+   onclick="return validarYArmarWhatsApp()" 
+   class="btn-enviar" 
+   style="display: block; text-align: center; text-decoration: none;">
+  ENVIAR CONSULTA POR WHATSAPP
+</a>
+    </div>
+  </main>
+
+    <!-- TARJETA DE UBICACIÓN DIRECTA -->
+  <div class="mapa-contenedor">
+    <div style="background-color: var(--blanco); padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 5px solid var(--azul-oscuro);">
+      <h3 style="margin-bottom: 10px;">¿Cómo llegar a De Mar & Fuego?</h3>
+      <p style="color: #555; margin-bottom: 20px;">Urb. El Bosque, Calle Las Jacarandas s/n • Distrito de Castilla, Piura</p>
+      <a href="https://www.google.com/maps/place/De+Mar+Y+Fuego/@-5.1883278,-80.6101097,17z/data=!3m1!4b1!4m6!3m5!1s0x904a105d516a945d:0x49eb2596f3e0a707!8m2!3d-5.1883278!4d-80.6101097!16s%2Fg%2F11c2pfbq_5?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-enviar" style="display: inline-block; width: auto; padding: 12px 30px; text-decoration: none;">
+        📍 VER UBICACIÓN EN GOOGLE MAPS
+      </a>
+    </div>
+  </div>
+
+
+  <footer>
+    <p>© De Mar & Fuego - Herencia Culinaria | Urb. El Bosque, Castilla - Piura</p>
+  </footer>
+
+     <script>
+    function enviarConsultaWhatsApp() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const motivo = document.getElementById('motivo').value;
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      if (!nombre || !mensaje) {
+        alert('Por favor, ingrese su nombre y el mensaje que desea enviar.');
+        return;
+      }
+
+      const textoPlano = "Estimados De Mar & Fuego, les saluda *" + nombre + "*.\n\n" +
+                         "*Motivo:* " + motivo + "\n" +
+                         "*Consulta:* " + mensaje;
+
+      const urlWhatsApp = "https://whatsapp.com" + encodeURIComponent(textoPlano);
+      window.open(urlWhatsApp, '_blank');
+    }
+  </script>
+
+
+
+</body>
+</html>
